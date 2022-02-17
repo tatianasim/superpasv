@@ -20,11 +20,11 @@ import AuthHelper from '../helpers/auth.helper';
         });
 
         it('response status code is 200',  function() {
-            expect(authHelper.responce.statusCode).to.eq(200);
+            expect(authHelper.response.statusCode).to.eq(200);
         });
 
         it('response body contains authorization token',  function() {
-            expect(authHelper.responce.body.token).not.to.be.undefined;
+            expect(authHelper.response.body.token).not.to.be.undefined;
         });
     });
 
@@ -35,11 +35,11 @@ import AuthHelper from '../helpers/auth.helper';
         });
 
         it('response status code is 404',  function() {
-             expect(authHelper.responce.statusCode).to.eq(404);
+             expect(authHelper.response.statusCode).to.eq(404);
         });
 
         it('response body contains error message', function() {
-              expect(authHelper.responce.body.message).to.eq('Wrong login or password.');
+              expect(authHelper.response.body.message).to.eq('Wrong login or password.');
         });
     });
  });
